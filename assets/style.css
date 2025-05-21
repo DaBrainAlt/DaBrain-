@@ -143,7 +143,7 @@ body {
 }
 
 span.new-feature-tag {
-  background: orange;
+  background: blue;
   border-radius: 100vw;
   padding: 0.2rem 0.4rem;
   margin-left: 1rem;
@@ -158,7 +158,7 @@ span.new-feature-tag {
 }
 
 .navbar .logo .xp {
-  color: orange;
+  color: blue;
 }
 
 .navbar a,
