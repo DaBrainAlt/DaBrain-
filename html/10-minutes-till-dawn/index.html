@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>10 Minutes Till Dawn - StrongDog XP</title>
+    <title>10 Minutes Till Dawn - DaBrain XP</title>
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -172,84 +172,10 @@
   <body>
     <div class="header">
       <a href="../../index.html" class="header-logo">
-        <span>StrongDog</span>
+        <span>DaBrain XP</span>
         <span>XP</span>
       </a>
     </div>
-
-    <div class="content">
-      <div class="ad ad-left">
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1609993827735056"
-          crossorigin="anonymous"
-        ></script>
-        <!-- in game ads -->
-        <ins
-          class="adsbygoogle"
-          style="display: inline-block; width: 120px; height: 300px"
-          data-ad-client="ca-pub-1609993827735056"
-          data-ad-slot="3552085788"
-        ></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-      <div class="game-container" id="gameContainer">
-        <!-- Game Embed Will Go Here -->
-      </div>
-      <div class="ad ad-right">
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1609993827735056"
-          crossorigin="anonymous"
-        ></script>
-        <!-- in game ads -->
-        <ins
-          class="adsbygoogle"
-          style="display: inline-block; width: 120px; height: 300px"
-          data-ad-client="ca-pub-1609993827735056"
-          data-ad-slot="3552085788"
-        ></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-    </div>
-
-    <div class="game-bar">
-      <span id="gameTitle">Game Title</span>
-      <span
-        id="favoriteIcon"
-        class="favorite-icon"
-        style="cursor: pointer; font-size: 24px"
-        >&#9734;</span
-      >
-      <button id="fullscreenButton" class="fullscreen-button">
-        Fullscreen
-      </button>
-    </div>
-
-    <div class="cards-section">
-      <h2>Recommended Games</h2>
-      <div class="card-container" id="cardContainer">
-        <!-- Cards will be loaded here -->
-      </div>
-    </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var fullscreenButton = document.getElementById("fullscreenButton");
-        var gameContainer = document.getElementById("gameContainer");
-        var gameTitle = document.getElementById("gameTitle");
-
-        function embedGame(gamePath, title) {
-          var iframe = document.createElement("iframe");
-          iframe.src = gamePath;
-          gameContainer.innerHTML = "";
-          gameContainer.appendChild(iframe);
-          gameTitle.textContent = title;
-        }
 
         embedGame("./game/index.html", "10 Minutes Till Dawn");
 
