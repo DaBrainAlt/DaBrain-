@@ -2,6 +2,42 @@
 <html>
   <head>
     <crossorigin="anonymous"></script>
+    <script async src=""
+    crossorigin="anonymous"></script>
+    <script>
+      (function () {
+        var customTitle = localStorage.getItem("customTitle");
+        var defaultTitle = document.title;
+        if (
+          customTitle &&
+          customTitle.trim() !== "" &&
+          customTitle !== defaultTitle
+        ) {
+          var titleInterval = setInterval(function () {
+            if (document.title !== customTitle) {
+              document.title = customTitle;
+            }
+          }, 500);
+          setTimeout(function () {
+            clearInterval(titleInterval);
+          }, 15000);
+        }
+        setTimeout(function () {
+          var customFavicon = localStorage.getItem("customFavicon");
+          if (customFavicon && customFavicon.trim() !== "") {
+            var favEl = document.querySelector('link[rel*="icon"]');
+            if (favEl) {
+              favEl.href = customFavicon;
+            } else {
+              var newFav = document.createElement("link");
+              newFav.rel = "icon";
+              newFav.href = customFavicon;
+              document.head.appendChild(newFav);
+            }
+          }
+        }, 2500);
+      })();
+    </script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0YLTCV2MMS"

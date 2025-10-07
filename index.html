@@ -1206,7 +1206,7 @@
 				}
 			}
 		</script>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-D88TDDVPGJ"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-D8TDDVPGJ"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
@@ -1413,9 +1413,9 @@
 			<p class="updates-paragraph-text">
 				I am the DABRAIN
 				<br>
-				I AM.
+				This is a Running and up website
 				<br>
-				Share DaBrain XPXP with your friends to keep it alive! (please)
+				Share DaBrain to keep this project up.
 			</p>
 
 		</div>
@@ -1423,9 +1423,9 @@
 			<div class="modal-content">
 				<span class="modal-close" id="closeModal">×</span>
 				<p>
-					The Str0ngDog Discord server is a place for Str0ngDog users to chill, request
+					The DaBrain AI Chatbot (WEI) is a place for DaBrain users to chill, request
 					ideas, talk with developers, and have fun!
-					<a href="https://discord.gg/pWjfQ4Sz5c" target="_blank">Join here</a>.
+					<a href="https://thedabrain.github.io/Wei/" target="_blank">Become Smart Here</a>.
 				</p>
 			</div>
 		</div>
@@ -1454,7 +1454,7 @@
 			</svg>
 		</div>
 		<div class="games-grid" id="allGameList"></div>
-		<h2 style="text-align: center"><strong>Str0ngDogXP LLC</strong></h2>
+		<h2 style="text-align: center"><strong>DaBrain Inc</strong></h2>
 		<h2 class="alternate-links-title">Alternate Links</h2>
 		<div class="alternate-links-container" id="alternate-links-container"></div>
 		<div class="alternate-links-key" id="alternate-links-key">
@@ -1475,8 +1475,8 @@
 			>
 		</div>
 		<h2 class="alternate-links-title">
-			Exclusive links available on the Str0ngDogXP
-			<a href="https://discord.gg/pWjfQ4Sz5c" style="color: #007bff">Discord server</a>!
+			Exclusive links available on the DaBrain
+			<a href="https://thedabrain.github.io/Wei/" style="color: #007bff">Wei the Smart AI</a>!
 		</h2>
 		<div class="slide-menu" id="slideMenu" style="transform: translateX(-100%)">
 			<div class="categories">
@@ -1491,7 +1491,7 @@
 		<div class="custom-slide-menu" id="customSlideMenu" style="transform: translateX(-100%)">
 			<div class="custom-options" style="padding: 20px">
 				<div class="toggle-option" style="margin-bottom: 10px">
-					<label for="top20Toggle">Show Top 20</label>
+					<label for="top20Toggle">Show Top</label>
 					<input type="checkbox" id="top20Toggle" checked />
 				</div>
 				<div class="toggle-option" style="margin-bottom: 10px">
@@ -1527,7 +1527,7 @@
 						type="text"
 						id="customTitleInput"
 						style="width: 100%; padding: 5px"
-						value="Str0ngDog XP"
+						value="DaBrain"
 					/>
 					<button id="resetTitleBtn" style="margin-top: 5px; padding: 5px 10px">
 						Reset Title
@@ -1535,111 +1535,7 @@
 				</div>
 				<div class="custom-option" style="margin-bottom: 10px">
 					<label
-						for="customFaviconInput"
-						style="color: #fff; display: block; margin-bottom: 5px"
-						>Custom Favicon URL</label
-					>
-					<input
-						type="text"
-						id="customFaviconInput"
-						style="width: 100%; padding: 5px"
-						value="img/favicon.ico"
-					/>
-					<button id="resetFaviconBtn" style="margin-top: 5px; padding: 5px 10px">
-						Reset Favicon
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="overlay" id="favoritesOverlay"></div>
-		<div class="popup-container" id="favoritesPopupContainer">
-			<div class="popup" id="favoritesPopup">
-				<p>You need to sign in to view your favorites.</p>
-				<button id="favoritesOkButton">OK</button>
-			</div>
-		</div>
-		<script>
-			const altLinksEl = document.getElementById("alternate-links-container"),
-				altLinksKeyEl = document.getElementById("alternate-links-key"),
-				altLinks = [
-					"DaBrain XP.de.com",
-					"mathcord.de.com",
-					"mathgames.de.com",
-					"unblockedmathgames.com",
-					"colute.net",
-					"chesstube.eu.com",
-					"gametree.net",
-					"hateroll.com",
-					"DaBrain XPunblocked.github.io",
-					"weakcatxp.github.io",
-					"gametreexp.github.io",
-					"mathcordxp.github.io",
-					"DaBrain XPxp.github.io",
-					"jman1593.github.io",
-					"DaBrain XP-1.vercel.app",
-					"mathcord.com",
-					"DaBrain XP.com",
-				];
-			altLinks.forEach(link => {
-				const a = document.createElement("a");
-				a.classList.add("alternate-link"),
-					(a.href = "https://" + link),
-					(a.target = "_blank");
-				const linkText = document.createElement("span");
-				linkText.textContent = link;
-				const statusDot = document.createElement("span");
-				statusDot.classList.add("spinning-dot"),
-					(statusDot.title = "Checking site availability...");
-				a.appendChild(linkText),
-					a.appendChild(statusDot),
-					altLinksEl.appendChild(a),
-					checkSiteStatus(link, statusDot);
-			});
-			async function pingSite(domain) {
-				return new Promise(resolve => {
-					const url = `https://${domain}/ads.txt?${Date.now()}`;
-					let didTimeout = false;
-					const timeout = setTimeout(() => {
-						didTimeout = true;
-						resolve(domain.endsWith("github.io") ? "unknown" : false);
-					}, 5000);
-					fetch(url, { mode: "cors" })
-						.then(response => response.text())
-						.then(text => {
-							if (!didTimeout) {
-								clearTimeout(timeout);
-								domain.endsWith("github.io")
-									? resolve("unknown")
-									: resolve(text.includes("f08c47fec0942fa0") ? true : false);
-							}
-						})
-						.catch(() => {
-							if (!didTimeout) {
-								clearTimeout(timeout);
-								resolve(domain.endsWith("github.io") ? "unknown" : false);
-							}
-						});
-				});
-			}
-			async function checkSiteStatus(domain, statusDot, maxRetries = 2) {
-				let retries = 0;
-				let status = await pingSite(domain);
-				while (status === false && retries < maxRetries) {
-					retries++;
-					status = await pingSite(domain);
-				}
-				statusDot.classList = "status-dot";
-				if (status === true) {
-					(statusDot.style.backgroundColor = "var(--green)"),
-						(statusDot.title = "Unblocked on this computer");
-				} else if (status === "unknown") {
-					(statusDot.style.backgroundColor = "yellow"),
-						(statusDot.title = "Unknown status (GitHub Pages)");
-				} else {
-					(statusDot.style.backgroundColor = "var(--red)"),
-						(statusDot.title = "Blocked on this computer");
-				}
-			}
+	
 		</script>
 		<script type="module">
 			import games from "./cards-data.js";
